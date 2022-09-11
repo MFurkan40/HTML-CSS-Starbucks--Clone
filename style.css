@@ -20,8 +20,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  /* border: 2px solid red; */
-
+  margin-bottom: -3rem;
   border-bottom: 2.5px solid rgb(232, 229, 229);
   font-weight: bold;
 }
@@ -102,6 +101,56 @@ body {
 
 .hamburger {
   display: none;
+  cursor: pointer;
+}
+
+.nav-btn {
+  display: inline;
+    padding-bottom: 0.5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    align-items: center;
+    transition: all .25s ease-in;
+}
+
+.navbar-mobil {
+  position: absolute;
+  right: 0px;
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-left: 22.2rem;
+  width: 67%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+
+.navbar-mobil-top {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+.navbar-mobil-top li {
+  padding: 2rem 1rem;
+  margin-bottom: .3rem;
+  font-size: 16px;
+}
+
+.navbar-mobil-top-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-mobil-bottom .right {
+  margin-bottom: 2rem;
+}
+
+.navbar-mobil-bottom .find-store {
+  margin-left: 2rem;
 }
 
 /* --------------------------------MAİN------------------------------- */
@@ -291,6 +340,14 @@ a {
   }
 }
 @media screen and (max-width: 1024px) {
+
+  .footer-ul-header{
+    cursor: pointer;
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+  }
+
   .text h1 {
     font-size: 2.5rem;
   }
@@ -306,9 +363,28 @@ a {
   .light h2 {
     font-size: 2rem;
   }
-  .footer-ul ul {
-    display: none;
+
+  .footer-ul {
+    display: flex;
+    flex-direction: column;
   }
+
+  .footer-ul ul {
+    justify-content: start;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    height: 0px;
+    transition: all .25s ease-in;
+  }
+
+  .footer-ul h3 {
+    cursor: pointer;
+  }
+
+  .footer-ul ul li a:hover {
+    font-weight: 500;
+  }
+
   .footer-up {
     display: flex;
     flex-direction: column;
@@ -317,7 +393,6 @@ a {
 
   .footer-ul {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 4rem;
   }
@@ -331,6 +406,7 @@ a {
     background-color: transparent;
     font-size: 2rem;
     align-items: center;
+    transition: all .25s ease-in;
   }
 
   .footer-icons {
