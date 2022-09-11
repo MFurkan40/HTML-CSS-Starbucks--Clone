@@ -31,3 +31,19 @@ buttons.forEach((item, index) => {
         };
     });
 });
+
+const navBtn = document.querySelector(".hamburger");
+const homeImg = document.querySelector(".grid1-img");
+const navMobil = document.querySelector(".navbar-mobil");
+
+navBtn.addEventListener("click", () => {
+    
+    navMobil.classList.toggle("mobil");
+    if (navMobil.classList.contains("mobil")) {
+        homeImg.style.filter = "blur(2px)";
+        navMobil.style.display = "flex";
+    } else {
+        homeImg.style.filter = "blur(0)";
+        navMobil.style.display = "none";
+    }
+});
