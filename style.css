@@ -106,12 +106,12 @@ body {
 
 .nav-btn {
   display: inline;
-    padding-bottom: 0.5rem;
-    border: none;
-    background-color: transparent;
-    font-size: 2rem;
-    align-items: center;
-    transition: all .25s ease-in;
+  padding-bottom: 0.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  align-items: center;
+  transition: all 0.25s ease-in;
 }
 
 .navbar-mobil {
@@ -125,7 +125,7 @@ body {
   display: none;
   flex-direction: column;
   z-index: 1;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar-mobil-top {
@@ -136,7 +136,7 @@ body {
 
 .navbar-mobil-top li {
   padding: 2rem 1rem;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   font-size: 16px;
 }
 
@@ -265,6 +265,19 @@ body {
   margin-bottom: 3rem;
 }
 
+.footer-btn {
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+}
+
+.footer-btn:hover {
+  transform-origin: center;
+  background-color: rgb(212, 212, 212);
+}
+
 .footer-ul li,
 a {
   text-decoration: none;
@@ -340,8 +353,7 @@ a {
   }
 }
 @media screen and (max-width: 1024px) {
-
-  .footer-ul-header{
+  .footer-ul-header {
     cursor: pointer;
     display: flex;
     min-width: 100%;
@@ -374,7 +386,7 @@ a {
     margin-top: 2.5rem;
     overflow: hidden;
     height: 0px;
-    transition: all .25s ease-in;
+    transition: all 0.25s ease-in;
   }
 
   .footer-ul h3 {
@@ -406,7 +418,7 @@ a {
     background-color: transparent;
     font-size: 2rem;
     align-items: center;
-    transition: all .25s ease-in;
+    transition: all 0.25s ease-in;
   }
 
   .footer-icons {
