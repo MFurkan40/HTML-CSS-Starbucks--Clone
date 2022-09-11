@@ -291,6 +291,14 @@ a {
   }
 }
 @media screen and (max-width: 1024px) {
+
+  .footer-ul-header{
+    cursor: pointer;
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+  }
+
   .text h1 {
     font-size: 2.5rem;
   }
@@ -306,9 +314,28 @@ a {
   .light h2 {
     font-size: 2rem;
   }
-  .footer-ul ul {
-    display: none;
+
+  .footer-ul {
+    display: flex;
+    flex-direction: column;
   }
+
+  .footer-ul ul {
+    justify-content: start;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    height: 0px;
+    transition: all .25s ease-in;
+  }
+
+  .footer-ul h3 {
+    cursor: pointer;
+  }
+
+  .footer-ul ul li a:hover {
+    font-weight: 500;
+  }
+
   .footer-up {
     display: flex;
     flex-direction: column;
@@ -317,7 +344,6 @@ a {
 
   .footer-ul {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 4rem;
   }
@@ -331,6 +357,7 @@ a {
     background-color: transparent;
     font-size: 2rem;
     align-items: center;
+    transition: all .25s ease-in;
   }
 
   .footer-icons {
