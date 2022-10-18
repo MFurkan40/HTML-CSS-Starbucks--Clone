@@ -4,23 +4,24 @@ const buttons = document.querySelectorAll(".footer-ul");
 //! Tıklanacak bölümlerin her birine tıklandığında çalıştıracağı fonksiyonu verelim
 buttons.forEach((item) => {
   const header = item.querySelector(".footer-ul-header");
-  header.addEventListener("click", (e) => {
+  header.addEventListener("click", () => {
     item.classList.toggle("open");
 
     //! Açılacak listeleri bir değişkene atayalım
     const footerList = item.querySelectorAll(".footer-up-ul");
-    //! Ters çevirmek için ok işaretlerini de değişkene atadık
-    const arrows = document.querySelectorAll(".footer-btn");
+    // ? Burada duruma göre forEach yerine Capturing kullanılabilirdi.
 
     if (item.classList.contains("open")) {
       footerList.forEach((list) => {
         list.style.height = `${list.scrollHeight}px`;
-        e.target.style.transform = "rotate(180deg)";
+        list.previousElementSibling.firstElementChild.nextElementSibling.style.transform =
+          "rotate(180deg)";
       });
     } else {
       footerList.forEach((list) => {
         list.style.height = "0px";
-        e.target.style.transform = "rotate(360deg)";
+        list.previousElementSibling.firstElementChild.nextElementSibling.style.transform =
+          "rotate(360deg)";
       });
     }
   });
